@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Portfolio site - Eduardo Cruz">
+    <meta name="keywords" content="Fron end, Back end, web development, Curitiba, Eduardo Henrique Cruz - Portfolio">
+    <meta name="author" content="Eduardo Henrique Cruz - cruzeduardohenrique@gmail.com">
+    <link rel="icon" href="favicon/icon.png">
+
+    <title>Eduardo Cruz - Web developer</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Nunito','https://fonts.googleapis.com/css?family=Roboto+Mono');
+      body { 
+        padding-top: 69px;
+      }
+      .navbar{
+        padding-left: 15%; padding-right: 15%; padding-top: 10px; padding-bottom: 10px; background-color: #eff0f2; border-bottom: 2px solid #c6c6c6; font-family: 'Nunito', sans-serif;
+      }
+      ul.menu-esquerda a{
+        color: #101c2d ; font-weight: bold; font-size: 18px;
+      }
+      ul.menu-direita a{
+        color: #101c2d; font-size: 16px;
+      }      
+      ul.menu-esquerda a:hover, ul.menu-direita a:hover{
+        text-decoration: underline; background-color: #efefef;
+      }
+      .pessoal{
+        margin-bottom: 200px;
+      }
+      .jumbotron{
+        background-color: #ffffff; margin-top: 150px;
+      }
+      .foto-logo{
+        width: 50%; height: auto; float: left;
+      }
+      img{
+        border-radius: 100%; float: right;
+      }
+      .imagem{
+        width: 30%; padding-top: 20px; margin-right: 50px;
+      }
+      .descricao-pessoal{
+       float: right;width: 50%; color: #101c2d; font-family: 'Roboto Mono', monospace;
+      }
+      div.descricao-pessoal h2{
+        font-weight: bold; font-size: 25px;
+      }
+      div.descricao-pessoal p{
+        font-size: 14px; letter-spacing: 2px;
+      }
+      .div-projetos-contato{
+        background-color: #eff0f2; padding-top: 15px; padding-bottom: 15px; padding-left: 20%; border-bottom: 2px solid #c6c6c6; border-top: 2px solid #c6c6c6; color: #101c2d; font-family: 'Roboto Mono', monospace; letter-spacing: 3px;
+      }
+      article, .contatos{
+        padding-left: 10%; padding-right: 10%; margin-top: 80px; margin-bottom: 80px; color: #101c2d;font-family: 'Roboto Mono',
+        monospace;
+      }
+      div.titulo-projeto h1{
+        padding-top: 40px; 
+      }
+      .descricao-projeto{
+        text-align: justify;
+      }
+      div.descricao-projeto a{
+        font-size: 16px;
+      }
+      div.descricao-projeto .btn{
+        padding: 10px 18px;
+      }
+      div.descricao-projeto .btn-default, .btn-enviar{
+        color: #101c2d; border-color: #c6c6c6;
+      }
+      div.descricao-projeto .btn-default:hover{
+        background-color: #eff0f2; border-color: #101c2d; 
+      }
+      .hr-divisao{
+        border-color: #ccc; border-width: 2px;
+      }
+      .glyphicon{
+        top: 3px;
+      }
+      input{
+        width: 75%;
+      }
+      label{
+        font-weight: 100;
+      }
+      .form-group{
+        margin-bottom: 0px;
+      }
+      .btn-enviar{
+        margin-top: 10px; width: 40%;
+      }
+      .btn-enviar:hover{
+        background-color: #eff0f2; border-color: #101c2d; 
+      }
+      footer{
+        background-color: #101c2d; color: #ffffff; font-family: 'Nunito', sans-serif; padding-top: 30px; padding-bottom: 10px;
+      }
+      /*Css dispositivos móveis*/
+      @media only screen and (max-device-width:480px){
+        .navbar{
+          padding-left: 5%; padding-right: 5%; padding-top: 5px; padding-bottom: 5px;
+        }
+        .navbar-fixed-top{
+          position: absolute;
+        }
+        .pessoal{
+        margin-bottom: 100px;
+        }
+        .jumbotron{
+          margin-top: 80px; margin-bottom: 0;
+        }
+        .foto-logo{
+          width: 100%; height: auto;
+        }
+        img{
+          float: none;
+        }
+        .imagem{
+          padding-top: 20px; padding-bottom: 20px; margin-right: 50px; margin: 0 auto;
+        }
+        .descricao-pessoal{
+         float: none; width: 100%; margin-top: 10px;
+        }
+        div.descricao-pessoal h2{
+          font-size: 17px; text-align: center;
+        }
+        div.descricao-pessoal p{
+          font-size: 12px;
+        }
+        .div-projetos-contato{
+         padding-top: 8px; padding-left: 0%; letter-spacing: 1px; text-align:center;
+        }
+        div.div-projetos-contato h3{
+          font-size: 14px; font-weight: bold; 
+        }
+        article, .contatos{
+          margin-top: 40px;
+        }
+        div.titulo-projeto h1{
+          margin-top: 0; font-size: 30px; text-align:center; margin-bottom: 20px;
+        }
+        label{
+          font-size: 12px;
+        }
+        input{
+          width: 100%;
+        }
+        .btn-enviar{
+          width: 70%;
+        }
+        .fomulario{
+          margin-top: 15px;
+        }
+      }
+      @media only screen and (min-device-width:481px) and (max-device-width: 640px){
+        .navbar{
+          padding-left: 5%; padding-right: 5%; padding-top: 0px; padding-bottom: 0px;
+        }
+        .foto-logo{
+          width: 100%; height: auto;
+        }
+        img{
+          float: none;
+        }
+        .imagem{
+          padding-top: 20px; padding-bottom: 20px; margin-right: 50px; margin: 0 auto;
+        }
+        .descricao-pessoal{
+         float: none; width: 100%; margin-top: 10px;
+        }
+        div.descricao-pessoal h2{
+          text-align: center;
+        }
+        .pessoal{
+          margin-bottom: 80px;
+        }
+        .div-projetos-contato{
+         padding-top: 8px; padding-left: 0%; letter-spacing: 1px; text-align:center;
+        }
+        input{
+          width: 100%;
+        }
+        .btn-enviar{
+          width: 60%;
+        }
+        .fomulario{
+          margin-top: 15px;
+        }
+      }
+      @media only screen and (min-device-width:641px) and (max-device-width: 960px){
+        .jumbotron{
+          margin-top: 100px; margin-bottom: 0;
+        }
+        div.descricao-pessoal h2{
+          font-size: 20px;
+        }
+        div.descricao-pessoal p{
+          font-size: 13px;
+        }
+        img{
+          float: none;
+        }
+        .imagem{
+          width: 60%; padding-top: 20px; padding-bottom: 20px; margin-right: 50px; margin: 0 auto;
+        }
+        .pessoal{
+          margin-bottom: 100px;
+        }
+        .div-projetos-contato{
+         padding-top: 8px; padding-left: 0%; letter-spacing: 1px; text-align:center;
+        }
+        input{
+          width: 100%;
+        }
+        .fomulario{
+          margin-top: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-full">
+      <header role="header" class="header">
+        <nav role="navegation" class="navbar navbar-fixed-top">
+          <ul class="nav nav-pills navbar-left menu-esquerda">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">WEB</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog/blog-index.html">BLOG</a>
+            </li>
+          </ul>
+          <ul class="nav nav-pills navbar-right menu-direita">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/ehCruz/">GitHub</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Twitter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollSuave" href="#contato">Contato</a>
+            </li>
+          </ul>
+        </nav>
+       </header>
+    </div>
+    <div class="container pessoal">
+      <main role="main">
+        <div class="jumbotron">
+          <div class="media foto-logo ">
+            <img class="img-responsive imagem" src="img/logo.jpg" alt="Logo"/>
+          </div>
+          <div class="descricao-pessoal ">
+            <h2>< front/back end  - dev ></h2>
+            <p>
+            Me chamo <b>Eduardo.</b><br>
+            Moro em <b>Curitiba/PR.</b><br>
+            Estudo <b>Sistemas de Informação - FESP.</b><br>
+            Gosto de <b>programação</b>, <b>linux</b><br>
+            e <b>GAMES.</b><br><br>
+            Site com intuito de <b>apresentação.</b>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="container-full">
+      <div class="div-projetos-contato">
+          <h3>< open source || side projects ></h3>
+      </div>  
+    </div>
+    <div class="container">
+      <article role="article">
+        <div class="row">
+          <div class="titulo-projeto col-md-6"><h1>Nome do projeto</h1></div>
+          <div class="descricao-projeto col-md-6">
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra sed neque a consequat. Quisque tincidunt leo nisl, imperdiet dapibus ex gravida et. Curabitur sem lorem, placerat non mi sit amet, feugiat molestie tortor. Nullam a interdum velit, a blandit libero. Quisque quis tristique velit. Maecenas aliquet pharetra velit, quis ultricies felis facilisis ut. Vivamus interdum augue et est lobortis, sed cursus enim sodales. Suspendisse accumsan posuere mauris et sagittis. Praesent egestas ultricies dictum. In hac habitasse platea dictumst. 
+            </p>
+            <a class="btn btn-default" href="#" >GitHub</a>
+          </div>
+        </div>
+        <div class="row"><hr class="hr-divisao"></div>
+      </article>
+    </div>
+    <div class="container-full" id="contato">
+      <div class="div-projetos-contato">
+          <h3>< contato ></h3>
+      </div>
+    </div>
+    <div class="container contatos">
+      <aside role="aside">
+        <div class="col-md-6">
+          <span class="glyphicon glyphicon-envelope" id="span-email"></span>
+          <label for="span-email">cruzeduardohenrique@gmail.com</label><br>
+          <span class="glyphicon glyphicon-earphone" id="span-fone"></span>
+          <label for="span-fone">+55 41 99942 3655</label>
+        </div>
+        <div class="col-md-6 fomulario">
+          FORMULÁRIO EMAIL<br>
+          <form action="#" method="POST">
+            Nome<br>
+            <input class="form-group" type="text" name="nome" placeholder="Nome"><br>
+            Fone<br>
+            <input class="form-group" type="text" name="fone" placeholder="Fone"><br>
+            Email<br>
+            <input class="form-group" type="email" name="email" placeholder="Email"><br>
+            Mensagem<br>
+            <textarea class="form-control" rows="4" id="comment"></textarea>
+            <input class="btn btn-default btn-enviar" type="submit" name="enviar" value="Enviar mensagem">
+          </form>
+        </div>
+      </aside>
+    </div>
+    <div class="container-full">
+      <footer role="footer" class="footer">
+        <p class="text-center">
+        Eduardo Henrique Cruz<br>
+        Curitiba, Paraná - Brasil<br>
+        &copy; 2017</p>
+      </footer>
+    </div>
+    <script type="text/javascript">
+      var $doc = $('html, body');
+      $('.scrollSuave').click(function() {
+        $doc.animate({
+          scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 700);
+          return false;
+      });
+    </script> 
+  </body>
+</html>
